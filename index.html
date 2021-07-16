@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://img.icons8.com/cute-clipart/128/000000/starbucks.png">
+    <title>Official StarBucks</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="logo.png"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br>It's <span>StarBucks</span></h2>
+                <p>
+                    Seattle Washington based coffee retailer and coffee bean roasting brand Starbucks Coffee are arguably the most successful coffee chains in the world. This American-born coffee brand has become so popular it is literally a part of daily life for many people living in the cities and suburbs.</p>
+                <a href="#">Learn More</a>
+                </div>
+                <div class="imgBox">
+                    <img src="img1.png" class="starbucks">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="thumb1.png" onclick="imgSlider('img1.png'); changeCircleColor('#017143')"></li>
+                <li><img src="thumb2.png" onclick="imgSlider('img2.png'); changeCircleColor('#eb7495')"></li>
+                <li><img src="thumb3.png" onclick="imgSlider('img3.png'); changeCircleColor('#d752b1')"></li>
+            </ul>
+            <ul class="sci">
+                <li><a href="#"><img src="facebook.png"></a></li>
+                <li><a href="#"><img src="twitter.png"></a></li>
+                <li><a href="#"><img src="instagram.png"></a></li>
+            </ul>
+    </section>
+
+    <script type="text/javascript">
+    function imgSlider(anything) {
+        document.querySelector('.starbucks').src = anything;
+    }
+
+    function changeCircleColor(color) {
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+    }
+
+    function toggleMenu() {
+        var menuToggle = document.querySelector('.toggle');
+        var navigation = document.querySelector('.navigation')
+        menuToggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+    }
+    </script>
+</body>
+</html>
+
